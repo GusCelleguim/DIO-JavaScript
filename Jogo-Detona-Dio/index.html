@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados de configuração básica da página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define o layout responsivo, adaptando ao tamanho da tela -->
+    <title>Detona Ralph</title> <!-- Define o título da página que será exibido na aba do navegador -->
+
+    <!-- Fontes externas importadas do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Pré-carrega a conexão com o Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Configuração de pré-carregamento para fontes com políticas de CORS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Importa duas fontes: 'Bebas Neue' e 'Press Start 2P' -->
+
+    <!-- Folhas de estilo CSS externas -->
+    <link rel="stylesheet" href="./src/styles/reset.css"> <!-- Folha de estilo para resetar configurações padrão dos elementos HTML -->
+    <link rel="stylesheet" href="./src/styles/main.css"> <!-- Folha de estilo principal da aplicação -->
+</head>
+
+<body>
+
+<!-- Container principal que engloba todo o conteúdo do jogo -->
+<div class="container">
+
+    <!-- Seção de menu que exibe informações como tempo restante, pontuação e vidas -->
+    <div class="menu">
+        <!-- Mostra o tempo restante do jogo -->
+        <div class="menu-time">
+            <h2 style="color: red;">Time Left</h2> <!-- Título indicando o tempo restante -->
+            <h2 id="time-left">0</h2> <!-- O tempo restante será atualizado dinamicamente via JavaScript -->
+        </div>
+
+        <!-- Mostra a pontuação do jogador -->
+        <div class="menu-score">
+            <h2 style="color: red;">Your Score</h2> <!-- Título indicando a pontuação -->
+            <h2 id="score">0</h2> <!-- A pontuação será atualizada dinamicamente via JavaScript -->
+        </div>
+
+        <!-- Mostra as vidas restantes do jogador -->
+        <div class="menu-lives">
+            <img src="./src/img/player.png" alt="foto do jogador" height="60px" /> <!-- Imagem representando o jogador -->
+            <h2>x3</h2> <!-- Número de vidas restantes (atualmente fixado em 3) -->
+        </div>
+    </div>
+
+    <!-- Painel onde os quadrados do jogo são exibidos -->
+    <div class="panel">
+
+        <!-- Primeira linha de quadrados -->
+        <div class="panel-row">
+            <div class="square" id="1"></div> <!-- Quadrado vazio com id 1 -->
+            <div class="square" id="2"></div> <!-- Quadrado vazio com id 2 -->
+            <div class="square" id="3"></div> <!-- Quadrado vazio com id 3 -->
+        </div>
+
+        <!-- Segunda linha de quadrados -->
+        <div class="panel-row">
+            <div class="square enemy" id="4"></div> <!-- Quadrado com inimigo inicial (classe "enemy") e id 4 -->
+            <div class="square" id="5"></div> <!-- Quadrado vazio com id 5 -->
+            <div class="square" id="6"></div> <!-- Quadrado vazio com id 6 -->
+        </div>
+
+        <!-- Terceira linha de quadrados -->
+        <div class="panel-row">
+            <div class="square" id="7"></div> <!-- Quadrado vazio com id 7 -->
+            <div class="square" id="8"></div> <!-- Quadrado vazio com id 8 -->
+            <div class="square" id="9"></div> <!-- Quadrado vazio com id 9 -->
+        </div>
+    </div>
+</div>
+
+<!-- Importa o arquivo JavaScript principal, garantindo que seja carregado após o HTML (defer) -->
+<script defer src="./src/js/main.js"></script>
+</body>
+</html>

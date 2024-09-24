@@ -1,0 +1,58 @@
+/* Importa a fonte "Press Start 2P" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Estilos para o container principal */
+.container {
+    display: flex; /* Define o layout flexível */
+    flex-direction: column; /* Organiza os elementos do container em uma coluna */
+    height: 100vh; /* Define a altura total da página */
+    background-image: url("../img/wall.png"); /* Define uma imagem de fundo para o container */
+}
+
+/* Estilos para o menu superior */
+.menu {
+    display: flex; /* Define layout flexível */
+    justify-content: space-evenly; /* Espaça os itens uniformemente no eixo horizontal */
+    align-items: center; /* Centraliza os itens no eixo vertical */
+
+    height: 90px; /* Altura do menu */
+    width: 100%; /* Largura total do menu */
+    background-color: #000000; /* Cor de fundo preta */
+    color: #ffffff; /* Cor do texto branca */
+    border-bottom: 5px solid #ffd700; /* Define uma borda dourada na parte inferior */
+}
+
+/* Estilos para o painel de jogo que contém os quadrados */
+.panel {
+    margin-top: 1rem; /* Margem superior de 1 rem */
+    display: flex; /* Define layout flexível */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilos para cada quadrado do jogo */
+.square {
+    height: 150px; /* Altura dos quadrados */
+    width: 150px; /* Largura dos quadrados */
+    border: 1px solid #000000; /* Borda preta ao redor de cada quadrado */
+    background-color: #1aeaa5; /* Cor de fundo verde claro */
+}
+
+/* Estilos aplicados aos quadrados com o inimigo (classe 'enemy') */
+.enemy {
+    background-image: url("../img/ralph.png"); /* Define a imagem de fundo do inimigo */
+    background-size: cover; /* Faz com que a imagem de fundo cubra todo o quadrado */
+}
+
+/* Estilos para a seção do menu que exibe as vidas */
+.menu-lives {
+    display: flex; /* Define layout flexível */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+}
+
+/* Estilos específicos para o segundo elemento <h2> dentro das seções de tempo e pontuação no menu */
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+    margin-top: 1rem; /* Adiciona margem superior de 1 rem ao segundo título <h2> */
+}
